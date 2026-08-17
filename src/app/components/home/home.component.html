@@ -1,0 +1,248 @@
+<!-- -------------------------- home section ----------------- -->
+<section class="py-5 home">
+    <div class="container py-5">
+        <div class="content">
+
+            <h5> <span>.</span><span>.</span> مرحباً بك في عدسة </h5>
+            <h1>اكتشف <span>فن</span> <br>
+                التصوير الفوتوغرافي</h1>
+            <p class="my-4">انغمس في أسرار المحترفين ونصائح عملية لتطوير مهاراتك في التصوير.</p>
+            <div>
+                <div class="flex flex-col sm:flex-row justify-center my-4 "><a
+                        class="btn-orange inline-flex items-center justify-center explore group"
+                        [routerLink]="['/blog']" data-discover="true"><span>استكشف المقالات</span>
+                        <i class="fa-solid fa-arrow-left-long mx-2"></i>
+                    </a>
+
+                    <a class="inline-flex items-center justify-center mx-4 know" [routerLink]="['/about']"
+                        data-discover="true">
+                        <i class=" fa-regular fa-circle-info"></i>
+                        <span>اعرف المزيد</span>
+
+                    </a>
+                </div>
+
+                <div class="cards d-flex justify-content-between">
+                    <div class="glass-card"><i class="fa-solid fa-newspaper text-2xl text-orange-500 mb-1"></i>
+                        <p class="my-1">+50</p>
+                        <h6 class="my-1 ">مقالة</h6>
+                    </div>
+                    <div class="glass-card  "><i class="fa-solid fa-users text-2xl text-orange-500 mb-1"></i>
+                        <p class="my-1">+10ألف</p>
+                        <h6 class="my-1 ">قارئ</h6>
+                    </div>
+                    <div class="glass-card  "><i class="fa-solid fa-folder-open text-2xl text-orange-500 mb-1"></i>
+                        <p class="my-1">4</p>
+                        <h6 class="my-1 ">تصنيفات</h6>
+                    </div>
+                    <div class="glass-card "><i class="fa-solid fa-pen-nib text-2xl text-orange-500 mb-1"></i>
+                        <p class="my-1">6</p>
+                        <h6 class="my-1 ">كاتب</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ----------------------------- مميز سيكشن -------------------------- -->
+<section class="fetured">
+    <div class="container py-5">
+        <div class="title pt-4">
+            <h5 class="mb-3"> <span>.</span><span>.</span> مميز</h5>
+            <h3>مقالات مختارة</h3>
+        </div>
+        <div class="row">
+            <div class="header my-3">
+                <p>محتوى منتقى لبدء رحلة تعلمك
+                </p>
+                <a class="group btn btn-orange px-4 " routerLink="/blog" data-discover="true">عرض الكل
+                    <i class="fa-solid fa-greater-than "></i></a>
+            </div>
+
+            <div class="cards">
+
+                <a>
+
+                    @for( photographer of globalservice.featuredPhotographers ; track $index){
+                    <div class="col-lg-12 card-photographer   d-flex bg-banger my-4  rounded-4">
+                        <div class="imge-wrapper rounded-end-4 w-50">
+                            <img [src]="photographer.image" class="rounded-end-4 w-100" alt="">
+                        </div>
+                        <div class="content py-3 px-4 rounded-start-4 w-50">
+                            <div class="flex items-center gap-3 mb-4"><span
+                                    class="px-3 py-1  category-card ms-3">{{photographer.category}}</span><span
+                                    class="flex items-center gap-1 ">
+                                    <i class=" fa-regular fa-clock"></i>
+                                    {{photographer.readTime}}</span></div>
+
+                            <h2 class="title">{{photographer.title}}</h2>
+                            <p class="excerpt-card">{{photographer.excerpt}}</p>
+                            <div class="bottom-card mt-5 d-flex justify-content-between">
+                                <div class="d-flex">
+                                    <div class="img-wrapper ms-3">
+                                        <img [src]="photographer.author.avatar" alt="">
+                                    </div>
+                                    <div class="name-date">
+                                        <h6 class="mb-0">سالم احمد </h6>
+                                        <p class="date">{{photographer.date}}</p>
+                                    </div>
+
+                                </div>
+                                <div class="d-flex">
+                                    <h6 class="read">اقرا المقال
+                                    </h6><span class="arrow-icon"><i
+                                            class="fa-solid fa-arrow-left-long me-2"></i></span>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+                    </div>
+                    }
+                </a>
+
+
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- -------------------------------------- التصنيفات سيكشن ---------------- -->
+<section class="Categories">
+    <div class="container">
+        <div class="title pt-4 text-center">
+            <h5 class="mb-3"> <span>.</span><span>.</span> التصنيفات</h5>
+            <h3> استكشف حسب الموضوع</h3>
+            <p>اعثر على محتوى مصمم حسب اهتماماتك</p>
+        </div>
+        <div class="row ">
+            @for( category of globalservice.categoriesList ; track $index){
+
+
+            <a [routerLink]="['/blog']" [queryParams]="{ category: category.name }" class="col-lg-3 pt-3 pb-2">
+
+
+
+                <div class="category-card pt-4 d-flex justify-content-between">
+                    <div>
+                        <span class="mb-4"> <i [class]="category.icon"> </i></span>
+                        <h6>{{category.name}}</h6>
+                        <p class="pb-2"> {{category.count}} مقالة</p>
+                    </div>
+                    <div class="pt-3 hide-icon">
+                        <i class="fa-sharp  fa-regular fa-greater-than"></i>
+                    </div>
+                </div>
+
+            </a>
+
+            }
+
+        </div>
+    </div>
+</section>
+
+<!-- ------------------
+الأحدث سيكشن------------------------------- -->
+
+<section class="events py-5">
+    <div class="container">
+        <div class="title pt-4">
+            <h5 class="mb-3"> <span>.</span><span>.</span>
+                الأحدث</h5>
+            <h3> أحدث المقالات</h3>
+
+        </div>
+        <div class="row">
+            <div class="header my-3 d-flex justify-content-between">
+                <p>محتوى منتقى لبدء رحلة تعلمك
+                </p>
+                <a class="px-4 inline-flex items-center " href="#" data-discover="true">عرض جميع المقالات
+                    <i class="fa-solid fa-arrow-left-long me-2"></i></a>
+            </div>
+
+
+            @for( photographer of globalservice.eventsPhotographers ; track $index){
+            <div class="col-lg-4 ">
+                <div class=" rounded-4 event-card overflow-hidden">
+                    <a href="">
+
+                        <div class="imge-wrapper overflow-hidden">
+                            <img [src]="photographer.image" alt="photographer.title" class="w-100 rounded-top-4">
+                        </div>
+                        <div class="content-card p-3">
+                            <i class=" fa-regular fa-clock"></i><span>{{photographer.readTime}}</span>
+                            <span class="me-3 fs-2">.</span> <span>{{photographer.date}}</span>
+                            <h3 class="my-2">{{photographer.title}}</h3>
+                            <p>{{photographer.excerpt}}</p>
+                        </div>
+                        <div class="border-line"></div>
+                        <div class="footer-card d-flex justify-content-between p-3">
+                            <div class="d-flex">
+                                <div class="img-avatar ">
+                                    <img [src]="photographer.author.avatar" class="w-100" alt="photographer.title">
+                                </div>
+                                <div class="me-2">
+                                    <h6 class="m-0">{{photographer.author.name}}</h6>
+                                    <p>{{photographer.author.role}}</p>
+                                </div>
+                            </div>
+                            <div class="pt-3 icon-footer-card">
+                                <i class="fa-sharp  fa-regular text-orange fa-greater-than"></i>
+                            </div>
+                        </div>
+
+
+                    </a>
+                </div>
+            </div>
+
+            }
+
+
+
+
+
+
+
+        </div>
+
+
+
+    </div>
+</section>
+
+<!-- -------------------------اشترك في نشرتنا الإخبارية سيكشن---------------------- -->
+<section class="subscribe">
+    <div class="content py-5 text-center rounded-5  w-50 mx-auto">
+        <i class=" fa-regular fa-envelope"></i>
+        <h3 class="mb-3">اشترك في <span>نشرتنا الإخبارية</span></h3>
+        <p>احصل على نصائح التصوير الحصرية ودروس جديدة مباشرة في بريدك الإلكتروني
+        </p>
+
+        <div class="my-3">
+            <input class="btn form-control text-white  px-4 " type="text" name="" id=""
+                placeholder="ادخل البريد الالكتروني ">
+            <a [routerLink]="['/home']" class="btn">اشترك الان</a>
+        </div>
+        <div class=" footer-card my-3">
+            <div>
+                <div class="imge-wrappers"><img class="w-8 h-8 rounded-full border-2 border-[#161616]" alt=""
+                        src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=32&amp;h=32&amp;fit=crop&amp;crop=face"><img
+                        class="w-8 h-8 rounded-full border-2 border-[#161616]" alt=""
+                        src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=32&amp;h=32&amp;fit=crop&amp;crop=face"><img
+                        class="w-8 h-8 rounded-full border-2 border-[#161616]" alt=""
+                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=32&amp;h=32&amp;fit=crop&amp;crop=face">
+                    <span class="me-2">انضم لـ <span class="text-white font-medium">+10,000</span> مصور</span>
+                </div>
+            </div><span class="fw-bold">• <span>بدون إزعاج</span></span><span class="fw-bold">• <span>إلغاء
+                    الاشتراك في أي
+                    وقت</span></span>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,249 @@
+<section class="py-5 title-sec">
+    <div class="container py-5">
+        <div class="title py-4  d-flex   flex-column align-items-center">
+            <h5 class="mb-3"> <span>.</span><i class="fa-solid fa-sim-card"></i>
+                مدونتنا</h5>
+            <h3> استكشف <span>مقالاتنا</span></h3>
+            <p>اكتشف الدروس والرؤى وأفضل الممارسات للتطوير الحديث</p>
+
+        </div>
+    </div>
+
+</section>
+<!-- -------------------- nav and taps ------------------------------- -->
+
+<div class="navtaps">
+    <div class="d-flex justify-content-between content py-3">
+        <input type="text " placeholder=" ابحث في المقالات...." class="btn form-control w-25 px-5">
+        <!-- links------ -->
+        <!-- <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active " id="all-tab" data-bs-toggle="tab" data-bs-target="#all-tab-pane"
+                    type="button" role="tab" aria-controls="all-tab-pane" aria-selected="true">
+                    جميع المقالات </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link btn-navtabs" id="light-tab" data-bs-toggle="tab"
+                    data-bs-target="#light-tab-pane" type="button" role="tab" aria-controls="light-tab-pane"
+                    aria-selected="false">
+                    اضاءة</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link btn-navtabs" id="Portrait-tab" data-bs-toggle="tab"
+                    data-bs-target="#Portrait-tab-pane" type="button" role="tab" aria-controls="Portrait-tab-pane"
+                    aria-selected="false">
+                    بورتريه</button>
+            </li>
+
+            <li class="nav-item" role="presentation">
+                <button class="nav-link btn-navtabs" id="natural-tab" data-bs-toggle="tab"
+                    data-bs-target="#natural-tab-pane" type="button" role="tab" aria-controls="natural-tab-pane"
+                    aria-selected="false">
+                    مناظر طبيعية</button>
+            </li>
+
+            <li class="nav-item" role="presentation">
+                <button class="nav-link btn-navtabs" id="technologies-tab" data-bs-toggle="tab"
+                    data-bs-target="#technologies-tab-pane" type="button" role="tab"
+                    aria-controls="technologies-tab-pane" aria-selected="false">
+                    تقنيات</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link btn-navtabs" id="equipment-tab" data-bs-toggle="tab"
+                    data-bs-target="#equipment-tab-pane" type="button" role="tab" aria-controls="equipment-tab-pane"
+                    aria-selected="false">
+                    معدات</button>
+            </li>
+
+        </ul> -->
+
+
+        <ul class="nav nav-tabs" id="myTab">
+            <li class="nav-item">
+                <button class="nav-link active " id="all-tab" type="button" (click)="show('all')"
+                    [ngClass]="{'active-link-category': selectedType === 'all'}"> جميع المقالات
+                </button>
+            </li>
+            <li class="nav-item">
+                <button class="nav-link btn-navtabs" id="light-tab" type="button" (click)="show('إضاءة')"
+                    [ngClass]="{'active-link-category': selectedType === 'إضاءة'}">
+                    اضاءة</button>
+            </li>
+            <li class="nav-item">
+                <button class="nav-link btn-navtabs" id="Portrait-tab" type="button" (click)="show('بورتريه')"
+                    [ngClass]="{'active-link-category': selectedType === 'بورتريه'}">
+                    بورتريه</button>
+            </li>
+
+            <li class="nav-item" role="presentation">
+                <button class="nav-link btn-navtabs" id="natural-tab" type="button" (click)="show('مناظر طبيعية')"
+                    [ngClass]="{'active-link-category': selectedType === 'مناظر طبيعية'}">
+                    مناظر طبيعية</button>
+            </li>
+
+            <li class="nav-item">
+                <button class="nav-link btn-navtabs" id="technologies-tab" type="button" (click)="show('تقنيات')"
+                    [ngClass]="{'active-link-category': selectedType === 'تقنيات'}">
+                    تقنيات</button>
+            </li>
+            <li class="nav-item">
+                <button class="nav-link btn-navtabs" id="equipment-tab" type="button" (click)="show('معدات')"
+                    [ngClass]="{'active-link-category': selectedType === 'معدات'}">
+                    معدات</button>
+            </li>
+
+        </ul>
+
+
+
+    </div>
+</div>
+
+<section class="cards py-5">
+    <div class="container">
+        <div class="d-flex justify-content-between py-4">
+            <p class="totalPhotographers">عرض <span>{{ globalservice.lengthPhotographersList ?
+                    globalservice.lengthPhotographersList : filteredPhotographerList.length}}</span> مقالات</p>
+            <div class="flex items-center buttons">
+                <button class="p-2 active" (click)="changeDisplayCards('row')"><i class="fa-solid fa-table-cells-large"
+                        style="color: rgb(214, 211, 211);"></i> </button>
+                <button class="p-2" (click)="changeDisplayCards('col')"><i class="fa-solid fa-bars"
+                        style="color: rgb(214, 211, 211);"></i></button>
+            </div>
+        </div>
+
+
+
+        <div class="content-cards  d-flex  justify-content-between flex-wrap" [ngClass]="{
+            'flex-row' : shape ==='row',
+            'flex-column' : shape ==='col',
+
+        }">
+
+            @for( photographer of filteredPhotographerList ; track $index){
+            <div class=" rounded-4 event-card overflow-hidden  my-3">
+                <a href="">
+                    <div class="imge-wrapper overflow-hidden">
+                        <img [src]="photographer.image" alt="photographer.title" class="w-100 rounded-top-4">
+                    </div>
+                    <div class="content-card p-3">
+                        <i class=" fa-regular fa-clock"></i><span>{{photographer.readTime}}</span>
+                        <span class="me-3 fs-2">.</span> <span>{{photographer.date}}</span>
+                        <h3 class="my-2">{{photographer.title}}</h3>
+                        <p>{{photographer.excerpt}}</p>
+                    </div>
+                    <div class="border-line"></div>
+                    <div class="footer-card d-flex justify-content-between p-3">
+                        <div class="d-flex">
+                            <div class="img-avatar ">
+                                <img [src]="photographer.author.avatar" class="w-100" alt="photographer.title">
+                            </div>
+                            <div class="me-2">
+                                <h6 class="m-0">{{photographer.author.name}}</h6>
+                                <p>{{photographer.author.role}}</p>
+                            </div>
+                        </div>
+                        <div class="pt-3 icon-footer-card">
+                            <i class="fa-sharp  fa-regular text-orange fa-greater-than"></i>
+                        </div>
+                    </div>
+
+
+                </a>
+            </div>
+
+
+
+            }
+
+        </div>
+
+        <div class="bottom-card mt-5">
+            <div class="d-flex justify-content-center align-items-center gap-2  ">
+                <button class="right-arrow" disabled=""> <i class="fa-solid fa-angle-right  "></i></button>
+                <div class="flex items-center gap-1">
+                    <button class="mx-1 active-btn">1</button>
+                    <button class="mx-1 num-hover">2</button>
+                    <button class="mx-1  num-hover">3</button>
+                    <button class="mx-1 num-hover">4</button>
+                    <button class="mx-1 num-hover">5</button>
+                </div><button class=" num-hover"><i class="fa-solid fa-angle-left"
+                        style="color: rgb(214, 211, 211);"></i>
+                </button>
+            </div>
+            <p class="text-center mt-3">صفحة 1 من 5</p>
+        </div>
+    </div>
+
+
+
+
+    <!-- <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active">
+            <div class="container">
+                <div class="d-flex justify-content-between flex-row gy-4">
+                 
+
+                    <div class="bottom-card mt-5">
+                        <div class="d-flex justify-content-center align-items-center gap-2  ">
+                            <button class="right-arrow" disabled=""> <i class="fa-solid fa-angle-right  "></i></button>
+                            <div class="flex items-center gap-1">
+                                <button class="mx-1 active-btn">1</button>
+                                <button class="mx-1 num-hover">2</button>
+                                <button class="mx-1  num-hover">3</button>
+                                <button class="mx-1 num-hover">4</button>
+                                <button class="mx-1 num-hover">5</button>
+                            </div><button class=" num-hover"><i class="fa-solid fa-angle-left"
+                                    style="color: rgb(214, 211, 211);"></i>
+                            </button>
+                        </div>
+                        <p class="text-center mt-3">صفحة 1 من 5</p>
+                    </div>
+
+
+                </div>
+            </div>
+        </div> 
+
+
+
+
+
+
+
+    </div>  -->
+</section>
+
+
+
+<!-- <div class=" rounded-4 event-card overflow-hidden">
+                <a href="">
+
+                    <div class="imge-wrapper overflow-hidden">
+                        <img [src]="photographer.image" alt="photographer.title" class="w-100 rounded-top-4">
+                    </div>
+                    <div class="content-card p-3">
+                        <i class=" fa-regular fa-clock"></i><span>{{photographer.readTime}}</span>
+                        <span class="me-3 fs-2">.</span> <span>{{photographer.date}}</span>
+                        <h3 class="my-2">{{photographer.title}}</h3>
+                        <p>{{photographer.excerpt}}</p>
+                    </div>
+                    <div class="border-line"></div>
+                    <div class="footer-card d-flex justify-content-between p-3">
+                        <div class="d-flex">
+                            <div class="img-avatar ">
+                                <img [src]="photographer.author.avatar" class="w-100" alt="photographer.title">
+                            </div>
+                            <div class="me-2">
+                                <h6 class="m-0">{{photographer.author.name}}</h6>
+                                <p>{{photographer.author.role}}</p>
+                            </div>
+                        </div>
+                        <div class="pt-3 icon-footer-card">
+                            <i class="fa-sharp  fa-regular text-orange fa-greater-than"></i>
+                        </div>
+                    </div>
+
+
+                </a>
+            </div> -->

@@ -1,0 +1,213 @@
+section.title-sec {
+  background: linear-gradient(to right, #0a0a0a, #0a0a0a, #281201, #0a0a0a, #0a0a0a, #0a0a0a);
+  .title {
+    h5 {
+      padding-inline: 15px;
+      border-radius: 20px;
+      background: #f973161a;
+      border: 1px solid #f973164d;
+      font-size: 14px;
+      font-weight: 400;
+      padding-bottom: 7px;
+      margin: auto;
+      margin-top: 70px;
+      margin-bottom: 30px;
+      color: #f97316;
+      span {
+        margin-left: 6px;
+        color: #f97316;
+        font-size: 20px;
+        font-weight: 900;
+      }
+    }
+    h3 {
+      color: #fff;
+      font-size: 60px;
+      span {
+        color: #f97316;
+      }
+    }
+
+    p {
+      color: #a1a1a1;
+      font-size: 17px;
+    }
+  }
+}
+
+.navtaps {
+  background-color: #0a0a0a;
+  border-bottom: 1px solid #262626;
+  .content {
+    width: 80%;
+    margin: auto;
+    input {
+      background-color: #161616;
+      border: 1px solid #262626;
+      padding-block: 13px;
+    }
+    .form-control:focus {
+      border-color: #d65b19;
+    }
+    ul {
+      border: 0;
+      li {
+        margin-inline: 4px;
+        font-size: 14px;
+        font-weight: 700;
+        button {
+          color: #a1a1a1;
+          background-color: #161616;
+          border: 1px solid #262626;
+          border-radius: 10px;
+          transition: all 0.5s;
+          &:hover {
+            border-color: #f97316;
+          }
+        }
+      }
+    }
+  }
+}
+.active-link-category {
+  background-color: #f97316 !important;
+  color: #fff !important;
+}
+section.cards {
+  background-color: #0a0a0a;
+  p.totalPhotographers {
+    color: #a1a1a1;
+    span {
+      color: #fff;
+    }
+  }
+  .buttons {
+    background-color: #161616;
+    border: 1px solid #262626;
+    border-radius: 10px;
+    padding-block: 4px;
+    padding-inline: 8px;
+    button.active {
+      background-color: #f97316;
+      border-radius: 6px;
+    }
+    button {
+      border: 0;
+      background-color: transparent;
+    }
+  }
+
+  .content-cards {
+    .event-card {
+      background-color: #161616;
+      border: 1px solid #262626;
+      width: 32%;
+      transition: all 1s;
+      .imge-wrapper > img {
+        transition: all 1s;
+      }
+      &:hover {
+        border-color: #333;
+        border-width: 1px;
+        transform: translateY(-4px);
+      }
+      &:hover .imge-wrapper > img {
+        transform: scale(1.2);
+      }
+      &:hover .content-card > h3 {
+        color: #d65b19;
+      }
+      .content-card {
+        i,
+        span {
+          color: #737373;
+        }
+        h3 {
+          color: #fff;
+          font-size: 20px;
+          transition: all 1s;
+          width: 322px;
+        }
+        p {
+          color: #a1a1a1;
+          font-size: 15px;
+        }
+      }
+      .border-line {
+        width: 93%;
+        border: 1px solid #262626;
+        margin: auto;
+      }
+      .footer-card {
+        .img-avatar {
+          width: 20%;
+          img {
+            border-radius: 50%;
+          }
+        }
+        h6 {
+          font-size: 13px;
+          color: #fff;
+        }
+        p {
+          color: #737373;
+          font-size: 12px;
+        }
+        .icon-footer-card {
+          i {
+            border-radius: 50%;
+            border: 1px solid;
+            display: flex;
+            width: 30px;
+            height: 30px;
+            font-size: 14px;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+            background-color: #522811;
+            border-color: #d65b19;
+            color: #d65b19;
+            /* background-color: color-mix(in oklab, #ff6900 5%, transparent) !important; */
+            transition: all 1s;
+          }
+        }
+      }
+
+      &:hover .footer-card > .icon-footer-card > i {
+        background-color: #d65b19;
+        color: #fff;
+        border-color: #d65b19;
+      }
+    }
+
+    .bottom-card {
+      button {
+        border-radius: 10px;
+        background-color: #161616;
+        color: #a1a1a1;
+        border: 1px solid #262626;
+        padding-block: 9px;
+        padding-inline: 16px;
+      }
+      button.right-arrow {
+        color: #525252;
+        background-color: #0a0a0a;
+      }
+      button.active-btn {
+        background-color: #d65b19;
+        color: #fff;
+      }
+      button.num-hover {
+        transition: all 0.5s;
+        &:hover {
+          color: #fff;
+          border-color: #d65b19;
+        }
+      }
+      p {
+        color: #737373;
+        font-size: 14px;
+      }
+    }
+  }
+}

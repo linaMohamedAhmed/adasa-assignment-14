@@ -1,0 +1,152 @@
+<section class="py-5 title-sec">
+    <div class="container py-5">
+        <div class="title py-4  d-flex   flex-column align-items-center">
+            <h5 class="mb-3"> <span>.</span><span>.</span>
+                من نحن </h5>
+            <h3 class="my-4"> مهمتنا هي <span>الإعلام والإلهام</span></h3>
+            <p class="w-50"> مدونة متخصصة في فن التصوير الفوتوغرافي، نشارك معكم أسرار المحترفين ونصائح عملية لتطوير
+                مهاراتكم. نحن
+                شغوفون بمشاركة المعرفة ومساعدة المصورين على تنمية مهاراتهم من خلال محتوى عالي الجودة. </p>
+
+        </div>
+        <div class="row">
+
+            <div class="glass-card   col-lg-3 col-md-6 text-center py-4"><i
+                    class="fa-solid fa-users text-2xl text-orange-500 mb-1"></i>
+                <p class="my-1">+2مليون</p>
+                <h6 class="my-1 ">قارئ شهرياً</h6>
+            </div>
+            <div class="glass-card   col-lg-3 col-md-6 text-center py-4"><i
+                    class="fa-solid fa-newspaper text-2xl text-orange-500 mb-2 block"></i>
+                <p class="my-1">+500</p>
+                <h6 class="my-1 ">مقالة منشورة</h6>
+            </div>
+            <div class="glass-card  col-lg-3 col-md-6 text-center py-4"><i
+                    class="fa-solid fa-pen-nib text-2xl text-orange-500 mb-1"></i>
+                <p class="my-1">+50</p>
+                <h6 class="my-1 ">كاتب خبير</h6>
+            </div>
+            <div class="glass-card  col-lg-3 col-md-6 text-center py-4"><i
+                    class="fa-solid fa-book-open text-2xl text-orange-500 mb-2 block"></i>
+                <p class="my-1">+15</p>
+                <h6 class="my-1 ">تصنيف</h6>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
+<!-- -----------------قيمنا------------- -->
+<section class="ourValues py-5">
+    <div class="container">
+        <div class="tilte text-center mb-5">
+            <div class="d-flex justify-content-center">
+                <div class="line"></div>
+                <h6 class="mx-4">قيمنا</h6>
+                <div class="line"></div>
+            </div>
+            <p>المبادئ التي توجه كل ما نقوم بإنشائه</p>
+        </div>
+
+        <div class="cards d-flex justify-content-between">
+            <div class="p-2 card-info">
+                <div class="item text-center"><i class="fa-solid fa-bullseye text-4xl text-orange-500 mb-4 block"></i>
+                    <h3 class="">الجودة أولاً
+                    </h3>
+                    <p class="">محتوى مدروس ومكتوب بخبرة</p>
+                </div>
+            </div>
+
+            <div class="p-2 card-info">
+                <div class="item text-center"><i class="fa-solid fa-bolt text-4xl text-orange-500 mb-4 block"></i>
+                    <h3 class="">تركيز عملي
+                    </h3>
+                    <p class="">أمثلة واقعية يمكنك تطبيقها اليوم</p>
+                </div>
+            </div>
+
+            <div class="p-2 card-info">
+                <div class="item text-center"><i class="fa-solid fa-handshake text-4xl text-orange-500 mb-4 block"></i>
+                    <h3 class="">المجتمع</h3>
+                    <p class="">تعلم مع آلاف المصورين</p>
+                </div>
+            </div>
+
+            <div class="p-2 card-info">
+                <div class="item text-center "><i
+                        class="fa-solid fa-arrows-rotate text-4xl text-orange-500 mb-4 block"></i>
+                    <h3 class="">دائماً
+                        محدث</h3>
+                    <p class="">أحدث الاتجاهات وأفضل الممارسات</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ----------------------------تعرف علي كتابنا----------------- -->
+<section>
+    <div class="container">
+        <div class="title py-4  d-flex   flex-column align-items-center">
+            <h5 class=""> <span>.</span>
+                فريقنا </h5>
+            <h3 class="my-3">
+                تعرف على كتابنا </h3>
+            <p class=""> فريقنا من المصورين والكتاب ذوي الخبرة شغوفون بمشاركة معرفتهم مع المجتمع. </p>
+        </div>
+
+        <div class="row g-3 gy-2 py-5">
+
+            @for( photographer of globalservice.photographerList ; track $index){
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card-photograph px-5 py-4 text-center">
+                    <div class="img-wrapper mb-4 text-center m-auto">
+                        <img [src]="photographer.author.avatar" class="w-100" alt="photographer.author.name">
+                    </div>
+                    <h6 class="mb-0"> {{photographer.author.name}}</h6>
+                    <p> {{photographer.author.role}}</p>
+
+                    <ul class="d-flex justify-content-center soical-links p-0 my-4 text-center">
+                        <li class="mx-2">
+                            <a [routerLink]="['/about']" class=""><i
+                                    class="fa-brands fa-x-twitter twitter-link"></i></a>
+                        </li>
+                        <li class="mx-2">
+                            <a [routerLink]="['/about']"><i class="fa-brands fa-github  github-link"></i></a>
+                        </li>
+                        <li class="mx-2">
+                            <a [routerLink]="['/about']"><i class="fa-brands fa-square-linkedin  linkedin-link"></i>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+
+            </div>
+            }
+
+        </div>
+    </div>
+</section>
+
+
+<!-- --------------------- لديك اسئله------------ -->
+
+
+<section class="question py-5">
+    <div class="content text-center w-50 m-auto py-5">
+        <h5>لديك أسئلة؟ دعنا نتحدث!</h5>
+        <p class="my-4">نحب أن نسمع منك. سواء كان لديك سؤال حول محتوانا، أو تريد المساهمة، أو تريد فقط إلقاء التحية، لا
+            تتردد في
+            التواصل.</p>
+        <div class="d-flex m-auto justify-content-center ">
+            <a href="#" class=" ms-4 envelope-link"> <i class="fa-regular fa-envelope ps-4"
+                    style="color: rgb(214, 211, 211);"></i>تواصل
+                معنا</a>
+            <a class="blog-link" [routerLink]="['/blog']">تصفح المقالات</a>
+        </div>
+    </div>
+</section>

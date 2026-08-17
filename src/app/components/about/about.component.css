@@ -1,0 +1,267 @@
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+/* --------------------- */
+section.title-sec {
+  background: linear-gradient(to right, #281201, #0a0a0a, #0a0a0a, #0a0a0a, #0a0a0a, #0a0a0a);
+  .title {
+    h5 {
+      padding-inline: 15px;
+      border-radius: 20px;
+      background: #f973161a;
+      border: 1px solid #f973164d;
+      font-size: 14px;
+      font-weight: 400;
+      padding-bottom: 7px;
+      margin: auto;
+      margin-top: 70px;
+      margin-bottom: 30px;
+      color: #f97316;
+      span {
+        margin-left: 6px;
+        color: #f97316;
+        font-size: 20px;
+        font-weight: 900;
+      }
+    }
+    h3 {
+      color: #fff;
+      font-size: 60px;
+      span {
+        color: #f97316;
+      }
+    }
+
+    p {
+      color: #a1a1a1;
+      font-size: 17px;
+      min-width: 768px;
+    }
+  }
+
+  .row {
+    width: 70%;
+    margin: auto;
+    div.glass-card {
+      padding-block: 10px;
+      border: 1px solid #262626;
+      background: #161616cc;
+      border-radius: 15px;
+      width: 22%;
+      transition: all 0.5s ease-in-out;
+      margin-inline: 10px;
+
+      p,
+      i {
+        font-size: 20px;
+        -webkit-text-fill-color: transparent;
+        background: linear-gradient(135deg, #f97316, #fbbf24);
+        background-clip: text;
+        font-weight: 700;
+      }
+      h6 {
+        font-size: 14px;
+        color: #737373;
+      }
+    }
+  }
+}
+/* -------------------- قيمنا سيكشن---------------- */
+section.ourValues {
+  background-color: #111;
+
+  div.line {
+    background: linear-gradient(to bottom, #89410d, #ea7a2a, #ea7a2a);
+    width: 3px;
+    padding: 2px;
+    height: 35px;
+    border-radius: 5px;
+  }
+  h6 {
+    font-size: 30px;
+    color: #fff;
+  }
+  p {
+    color: #a1a1a1;
+  }
+
+  .cards {
+    .card-info {
+      width: 24%;
+      transition: all 0.5s;
+
+      .item {
+        background-color: #161616;
+        border: 1px solid #262626;
+        border-radius: 10px;
+        padding-block: 20px;
+        font-size: 30px;
+        transition: all 0.5s;
+
+        &:hover {
+          border-color: #f97316;
+        }
+        &:hover h3 {
+          color: #f97316;
+        }
+
+        i {
+          color: #f97316;
+        }
+        h3 {
+          font-size: 17px;
+          color: #fff;
+          transition: all 0.5s;
+        }
+        p {
+          color: #a1a1a1;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+/* ---------------------------  تعرف علي كتابنا ------------------  */
+section {
+  background-color: #0a0a0a;
+  .title {
+    width: 60%;
+    margin: auto;
+    h5 {
+      padding-inline: 15px;
+      border-radius: 20px;
+      background: #f973161a;
+      border: 1px solid #f973164d;
+      font-size: 14px;
+      font-weight: 400;
+      padding-bottom: 7px;
+      color: #f97316;
+      margin: auto;
+      margin-top: 70px;
+
+      span {
+        margin-left: 6px;
+        color: #f97316;
+        font-size: 20px;
+        font-weight: 900;
+      }
+    }
+    h3 {
+      font-size: 30px;
+      line-height: 1.5;
+      color: #fff;
+    }
+    p {
+      font-size: 1.5rem;
+      color: #a1a1a1;
+      font-size: 18px;
+    }
+  }
+
+  .card-photograph {
+    background-color: #161616;
+    border: 1px solid #262626;
+    border-radius: 15px;
+    color: #fff;
+    width: 90%;
+    transition: all 0.5s;
+    &:hover {
+      border-color: #f97316;
+    }
+    &:hover .img-wrapper {
+      border: 4px solid #783505;
+      border-radius: 50%;
+    }
+    .img-wrapper {
+      border: 4px solid #363636;
+      border-radius: 50%;
+      width: 40%;
+      img {
+        border-radius: 50%;
+      }
+    }
+    h6 {
+      font-size: 19px;
+    }
+    p {
+      color: #f97316;
+      font-size: 15px;
+    }
+
+    ul {
+      li {
+        a {
+          i {
+            color: #737373;
+            border-radius: 9px;
+            padding-inline: 19px;
+            padding-block: 11px;
+            display: flex;
+            background-color: #262626;
+            justify-content: center;
+            transition: all 0.5s;
+            i.twitter-link&:hover {
+              background-color: #f97316 !important;
+              color: #fff;
+            }
+            i.github-link&:hover {
+              background-color: #404040;
+              color: #fff;
+            }
+            i.linkedin-link&:hover {
+              background-color: #155dfc;
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ---------------- لديك اسئله ----------------- */
+
+section.question {
+  background: linear-gradient(to bottom, #e16309, #ce6011, #dc6816, #ea7624, #d06d26);
+  color: #fff;
+
+  .content {
+    h5 {
+      font-size: 30px;
+    }
+    p {
+      font-size: 18px;
+    }
+    div {
+      a.envelope-link {
+        background-color: #111;
+        border: 1px solid #111;
+        color: #fff;
+        padding-block: 13px;
+        padding-inline: 35px;
+        border-radius: 10px;
+        transition: all 0.5s;
+        &:hover {
+          transform: translateY(-2px);
+        }
+      }
+
+      a.blog-link {
+        background: linear-gradient(to bottom, #e16309, #f9822d, #ea701a);
+        color: #fff;
+        border: 1px solid #fff;
+        padding-block: 13px;
+        padding-inline: 35px;
+        border-radius: 10px;
+        transition: all 0.5s;
+        &:hover {
+          background: #fff;
+          color: #0a0a0a;
+        }
+      }
+    }
+  }
+}

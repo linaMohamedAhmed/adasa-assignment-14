@@ -1,0 +1,44 @@
+<nav>
+    <nav class="navbar navbar-expand-lg text-white">
+        <div class="container">
+
+            <a class="navbar-brand d-flex w-25 " [routerLink]="['/home']">
+                <div class="logo">
+                    <img src="/imgs/logo-GdqARQRt.png" class="w-100" alt="">
+                </div>
+                <div>
+                    <h6 class="text-white fs-4 mb-0">عدسة </h6>
+                    <h6 class="color-orange text-small">عالم التصوير الفوتوغرافي</h6>
+                </div>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse flex-grow-0 ms-5" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" routerLink="/home"
+                            routerLinkActive="bg-orang-link text-white rounded-5 px-4">الرئيسية</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link" routerLink="/blog"
+                            routerLinkActive="bg-orang-link text-white rounded-5 px-4">المدونة</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/about"
+                            routerLinkActive="bg-orang-link text-white rounded-5 px-4">من نحن</a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="left-navbar">
+                <i class="fa-solid fa-magnifying-glass ms-3 " style="color: rgb(180, 183, 182);"></i>
+                <a class=" text-sm text-white" href="/blog" data-discover="true">ابدأ القراءة</a>
+            </div>
+        </div>
+    </nav>
+
+</nav>

@@ -1,0 +1,68 @@
+:root {
+  --main-color: #aa5e12;
+}
+/* ---------------------------- classes ----------- */
+.container {
+  width: 80%;
+}
+.color-orange {
+  color: #bc6814;
+}
+.bg-orang-link {
+  background-color: #f84f00;
+}
+.text-small {
+  font-size: 13px;
+  font-weight: 400;
+}
+/* -------------------------tags-------------------- */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99999;
+  background-color: #202020f2;
+  border-color: #0000;
+  .logo {
+    width: 13%;
+    margin-left: 10px;
+  }
+  ul.navbar-nav {
+    padding-inline: 20px;
+    padding-block: 7px;
+    border: 1px solid #262626;
+    border-radius: 40px;
+    li {
+      a {
+        color: #a1a1a1;
+        font-size: 14px;
+        font-weight: 500;
+        transition: all 0.5s;
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .left-navbar {
+    i {
+      font-size: 14px;
+    }
+    a {
+      font-weight: 600;
+      font-size: 16px;
+      background: linear-gradient(to right, #ea631a, #cb591c, #ed5d0e);
+      padding-inline: 30px;
+      padding-block: 13px;
+      border-radius: 25px;
+      transition: all 1s;
+      display: inline-block;
+    }
+  }
+}
+
+.left-navbar a:hover {
+  transform: translateY(-2px);
+}

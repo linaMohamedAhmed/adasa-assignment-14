@@ -1,0 +1,606 @@
+/* 
+.color-orange{
+        background: linear-gradient(135deg, #f97316, #fbbf24);
+
+} */
+
+:root {
+  --bg-hover-orange: linear-gradient(to right, #ee793a, #de6b2e, #d86d33, #e96d2b);
+}
+/* =================== classes ============== */
+.fs {
+  font-size: 14px;
+}
+.btn-orange {
+  background: linear-gradient(to right, #ed6319, #d65b19, #f66b21, #ed5c0e);
+}
+.text-orange {
+  color: #ed6319;
+}
+.container {
+  padding-block: 50px;
+  width: 80%;
+}
+a {
+  color: inherit;
+}
+/* ----------------------- home section -------------------- */
+section.home {
+  background-color: #0a0a0a;
+  min-height: 100vh;
+  .container {
+    display: flex;
+    flex-direction: column;
+    padding-block: 50px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffff;
+  }
+  .content {
+    width: 60%;
+    h5 {
+      padding-inline: 15px;
+      border-radius: 20px;
+      background: #f973161a;
+      border: 1px solid #f973164d;
+      font-size: 14px;
+      font-weight: 400;
+      padding-bottom: 7px;
+      width: 28%;
+      margin: auto;
+      margin-top: 70px;
+      margin-bottom: 30px;
+
+      span {
+        margin-left: 6px;
+        color: #f97316;
+        font-size: 20px;
+        font-weight: 900;
+      }
+    }
+    h1 {
+      font-size: 4.5rem;
+      line-height: 1.5;
+      span {
+        color: #f97316;
+      }
+    }
+    p {
+      font-size: 1.5rem;
+      color: #a1a1a1;
+      font-size: 18px;
+      margin-block: 15px;
+    }
+
+    div {
+      margin-block: 10px;
+      a.know {
+        color: #fff;
+        padding-inline: 25px;
+        padding-block: 12px;
+        border-radius: 30px;
+        border: 1px solid #333;
+        display: inline-block;
+        transition: all 1s;
+        i {
+          font-size: 14px;
+          transition: all 1s;
+          color: #fff;
+        }
+        &:hover {
+          color: #f97316;
+          background: #f973161a;
+          border-color: #f97316;
+        }
+        &:hover i {
+          color: #f97316;
+        }
+      }
+      a.explore {
+        color: #fff;
+        padding-inline: 23px;
+        padding-block: 12px;
+        border-radius: 30px;
+        display: inline-block;
+        transition: all 1s;
+        i {
+          font-size: 14px;
+          transition: all 1s;
+          color: #fff;
+        }
+        &:hover {
+          transform: translateY(-2px);
+        }
+        &:hover i {
+          transform: translatex(-5px);
+        }
+      }
+    }
+
+    .cards {
+      div {
+        padding-block: 10px;
+        border: 1px solid #262626;
+        background: #161616cc;
+        border-radius: 15px;
+        width: 22%;
+        transition: all 0.5s ease-in-out;
+        &:hover {
+          transform: scale(1.1);
+        }
+        p,
+        i {
+          font-size: 20px;
+          -webkit-text-fill-color: transparent;
+          background: linear-gradient(135deg, #f97316, #fbbf24);
+          background-clip: text;
+          font-weight: 700;
+        }
+        h6 {
+          font-size: 14px;
+          color: #737373;
+        }
+      }
+    }
+  }
+}
+
+/* ------------------------------------ مميز سيكشن ------------------- */
+section.fetured {
+  background: linear-gradient(to right, #0a0a0a, #0a0a0a, #0a0a0a, #140f0b, #221301);
+  .title {
+    h5 {
+      border: 1px solid;
+      width: fit-content;
+      padding-bottom: 8px;
+      padding-inline: 14px;
+      font-size: 15px;
+      border-radius: 19px;
+      background-color: #f973164d;
+      background: #f973161a;
+      color: rgb(249, 115, 22);
+    }
+    h3 {
+      color: #fff;
+      font-size: 55px;
+      font-weight: 700;
+    }
+  }
+
+  .row {
+    .header {
+      display: flex;
+      justify-content: space-between;
+      p {
+        color: #a1a1a1;
+        font-size: medium;
+        font-weight: 500;
+      }
+      a {
+        font-size: 14px;
+        font-weight: 500;
+        padding-block: 10px;
+        display: inline-block;
+        transition: all 0.5s;
+        color: #fff;
+        &:hover {
+          transform: translateY(-2px);
+        }
+        &:hover i {
+          transform: translatex(-3px);
+        }
+        i {
+          transition: all 0.5s;
+          font-size: 9px !important;
+          color: #fff;
+        }
+      }
+    }
+    .cards {
+      .card-photographer {
+        transition: all 1s;
+        .imge-wrapper {
+          overflow: hidden;
+          min-height: 300px;
+          img {
+            height: 100%;
+            object-fit: cover;
+            transition: all 1s;
+          }
+        }
+        &:hover {
+          border: 1px solid #d65b19;
+        }
+        &:hover h2.title,
+        h6.read {
+          color: rgb(249, 115, 22);
+        }
+        &:hover h6.read {
+          transform: translateX(4px);
+        }
+        &:hover .imge-wrapper > img {
+          transform: scale(1.2);
+        }
+      }
+      .content {
+        background-color: #161616;
+        span.category-card {
+          border: 1px solid;
+          width: fit-content;
+          padding-bottom: 8px;
+          padding-inline: 14px;
+          font-size: 15px;
+          border-radius: 19px;
+          background-color: #f973164d;
+          background: #f973161a;
+          color: rgb(249, 115, 22);
+        }
+        span {
+          color: #737373;
+          font-size: 14px;
+        }
+        h2 {
+          color: #fff;
+          transition: all 1s;
+        }
+        p.excerpt-card {
+          width: 85%;
+          color: #a1a1a1;
+          font-size: 16px;
+          margin-top: 15px;
+          margin-bottom: 100px;
+        }
+      }
+    }
+    .bottom-card {
+      .img-wrapper {
+        width: 25%;
+
+        img {
+          width: 100%;
+          border-radius: 50%;
+        }
+      }
+
+      .name-date {
+        p {
+          font-size: 12px;
+          color: #737373;
+          margin-top: 4px;
+        }
+        h6 {
+          font-size: 13px;
+          color: #fff;
+        }
+      }
+    }
+    h6 {
+      font-size: 14px;
+      color: #fff;
+      transition: all 1s;
+    }
+    span.arrow-icon {
+      i {
+        color: rgb(249, 115, 22);
+      }
+    }
+  }
+}
+
+/* --------------------------- التصنيفات سيكشن --------------- */
+
+section.Categories {
+  background-color: #111111;
+  border-top: 1px solid #262626;
+  border-bottom: 2px solid #262626;
+
+  .title {
+    h5 {
+      border: 1px solid;
+      width: fit-content;
+      padding-top: 7px;
+      padding-bottom: 8px;
+      text-align: center;
+      padding-inline: 14px;
+      font-size: 15px;
+      border-radius: 19px;
+      background-color: #f973164d;
+      background: #f973161a;
+      color: rgb(249, 115, 22);
+      margin: auto;
+    }
+    h3 {
+      font-size: 50px;
+      color: #fff;
+    }
+    p {
+      font-size: 17px;
+      color: #a1a1a1;
+      margin-block: 10px;
+    }
+  }
+  a {
+    &:hover .category-card {
+      background-color: #ea6923;
+      transform: translateY(-1.8px);
+    }
+    &:hover .category-card > div > span,
+    &:hover .category-card > div > p {
+      color: #fff;
+    }
+    &:hover .category-card > div > span {
+      background-color: #f48f59;
+      border-color: #f48f59;
+    }
+    &:hover .category-card > div.hide-icon {
+      display: block;
+      /* transform: translatex(1); */
+    }
+  }
+  .category-card {
+    border: 1px solid;
+    border-radius: 20px;
+    padding-inline: 20px;
+    background-color: #161616;
+    min-height: 135px;
+    transition: all 0.5s;
+
+    span {
+      display: inline-block;
+      background-color: color-mix(in oklab, #ff6900 5%, transparent);
+      padding-block: 8px;
+      padding-inline: 11px;
+      border-radius: 11px;
+      margin-bottom: 10px;
+      border: 1px solid;
+      font-size: 16px;
+      text-align: center;
+      color: #ff6900;
+      transition: all 1s;
+    }
+    h6 {
+      color: #fff;
+    }
+    p {
+      color: #737373;
+      font-size: 14px;
+      transition: all 1s;
+    }
+
+    div.hide-icon {
+      display: none;
+      i {
+        border: 1px solid #ceaa8b;
+        border-radius: 50%;
+        padding-block: 7px;
+        padding-inline: 12px;
+        font-size: 14px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        background-color: #ceaa8b;
+        transition: all 2s;
+      }
+    }
+  }
+}
+
+/* --------------------------  events section ------------------- */
+section.events {
+  background: linear-gradient(to right, #1d0c00, #0a0a0a, #0a0a0a, #0a0a0a, #0a0a0a);
+
+  .title {
+    h5 {
+      border: 1px solid;
+      width: fit-content;
+      padding-top: 7px;
+      padding-bottom: 8px;
+      padding-inline: 14px;
+      font-size: 15px;
+      border-radius: 19px;
+      background-color: #f973164d;
+      background: #f973161a;
+      color: rgb(249, 115, 22);
+    }
+    h3 {
+      font-size: 40px;
+      color: #fff;
+    }
+  }
+
+  .row {
+    .header {
+      p {
+        color: #a1a1a1;
+        font-size: 17px;
+      }
+      a {
+        display: inline-block;
+        color: #ff6900;
+        transition: all 1s;
+        &:hover {
+          color: #ff8904;
+        }
+        i {
+          transition: all 1s;
+        }
+        &:hover i {
+          transform: translateX(-1.5px);
+        }
+      }
+    }
+
+    .event-card {
+      background-color: #161616;
+      border: 1px solid #262626;
+      transition: all 1s;
+      .imge-wrapper > img {
+        transition: all 1s;
+      }
+      &:hover {
+        border-color: #333;
+        border-width: 1px;
+        transform: translateY(-4px);
+      }
+      &:hover .imge-wrapper > img {
+        transform: scale(1.2);
+      }
+      &:hover .content-card > h3 {
+        color: #d65b19;
+      }
+      .content-card {
+        i,
+        span {
+          color: #737373;
+        }
+        h3 {
+          color: #fff;
+          font-size: 20px;
+          transition: all 1s;
+        }
+        p {
+          color: #a1a1a1;
+          font-size: 15px;
+        }
+      }
+      .border-line {
+        width: 93%;
+        border: 1px solid;
+        margin: auto;
+      }
+      .footer-card {
+        .img-avatar {
+          width: 20%;
+          img {
+            border-radius: 50%;
+          }
+        }
+        h6 {
+          font-size: 13px;
+          color: #fff;
+        }
+        p {
+          color: #737373;
+          font-size: 12px;
+        }
+        .icon-footer-card {
+          i {
+            border-radius: 50%;
+            border: 1px solid;
+            display: flex;
+            width: 30px;
+            height: 30px;
+            font-size: 14px;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+            background-color: color-mix(in oklab, #ff6900 5%, transparent);
+            transition: all 1s;
+          }
+        }
+      }
+
+      &:hover .footer-card > .icon-footer-card > i {
+        background-color: #d65b19;
+        color: #fff;
+        border-color: #d65b19;
+      }
+    }
+  }
+}
+
+/* -------------------- اشترك في نشرتنا الإخبارية سيكشن---------------*/
+section.subscribe {
+  background: linear-gradient(
+    to right,
+    #0a0a0a,
+    #0a0a0a,
+    #0a0a0a,
+    #2e1000,
+    #0a0a0a,
+    #0a0a0a,
+    #0a0a0a
+  );
+  padding-block: 100px;
+  .content {
+    background-color: #161616;
+    border: 1px solid #262626;
+
+    i {
+      font-size: 30px;
+      background-color: #ed6319;
+      width: 60px;
+      height: 60px;
+      border-radius: 13px;
+      color: #fff;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      color: #fff;
+      font-size: 40px;
+      span {
+        color: #d65b19;
+      }
+    }
+    p {
+      color: #a1a1a1;
+      font-size: 18px;
+    }
+
+    div {
+      input {
+        border: 1px solid #262626;
+        background-color: #0a0a0a;
+        width: 50%;
+        padding-block: 13px;
+      }
+      .form-control:focus {
+        border-color: #ff6900;
+      }
+      a {
+        background-color: #e4630c;
+        margin-right: 20px;
+        padding-block: 11px;
+        width: 18%;
+        color: #fff;
+        font-size: 17px;
+        font-weight: 800;
+        transition: all 1s;
+        &:hover {
+          background-color: #b44204;
+        }
+      }
+    }
+
+    .footer-card {
+      display: flex;
+      justify-content: space-between;
+      width: 75%;
+      margin: auto;
+      .imge-wrappers {
+        img {
+          border-radius: 50%;
+          margin-inline: 2px;
+        }
+        span {
+          font-size: 14px;
+          color: #737373;
+        }
+      }
+    }
+
+    div {
+      span {
+        color: #737373;
+        font-size: 14px;
+        font-weight: 500;
+      }
+    }
+  }
+}
